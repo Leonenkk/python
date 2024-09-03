@@ -1,11 +1,12 @@
 import smtplib
 import os
 from dotenv import load_dotenv
+
 load_dotenv()
-email_sender='leonenko.maksym@yandex.by'
-email_receiver='maxleon1611@gmail.com'
-subject='Приглашение!'
-letter="""From: {email_s}
+email_sender = 'leonenko.maksym@yandex.by'
+email_receiver = 'maxleon1611@gmail.com'
+subject = 'Приглашение!'
+letter = """From: {email_s}
 To: {email_r}
 Subject: {sub}
 Content-Type: text/plain; charset="UTF-8";
@@ -26,14 +27,14 @@ Content-Type: text/plain; charset="UTF-8";
 
 Регистрируйся → %website%  
 На курсы, которые еще не вышли, можно подписаться и получить уведомление о релизе сразу на имейл.
-""".format(email_s=email_sender,email_r=email_receiver,sub=subject)
-site_name='https://dvmn.org/referrals/dyIERzS1VX85dP8gzMFuxEM36urVVWrwBbLjhGmM/'
-friend_name='Влад'
-sender_name='Максим'
-letter=letter.replace('%website%',site_name).replace('%friend_name%',friend_name).replace('%my_name%',sender_name)
-print(letter)
-letter=letter.encode("UTF-8")
-server=smtplib.SMTP_SSL('smtp.yandex.ru:465')
-server.login(os.getenv("LOGIN"),os.getenv("PASSWORD"))
-server.sendmail(email_sender,email_receiver,letter)
+""".format(email_s=email_sender, email_r=email_receiver, sub=subject)
+site_name = 'https://dvmn.org/referrals/dyIERzS1VX85dP8gzMFuxEM36urVVWrwBbLjhGmM/'
+friend_name = 'Влад'
+sender_name = 'Максим'
+letter = (letter.replace('%website%', site_name).replace('%friend_name%', friend_name)
+          .replace('%my_name%', sender_name))
+letter = letter.encode("UTF-8")
+server = smtplib.SMTP_SSL('smtp.yandex.ru:465')
+server.login(os.getenv("LOGIN"), os.getenv("PASSWORD"))
+server.sendmail(email_sender, email_receiver, letter)
 server.quit()
