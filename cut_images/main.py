@@ -1,0 +1,21 @@
+from PIL import Image
+
+monro_picture = Image.open('monro.jpg')
+red_monro, green_monro, blue_monro = monro_picture.split()
+coordinates = (50, 0, red_monro.width, red_monro.height)
+left_red_monro = red_monro.crop(coordinates)
+coordinates_for_middle = (25, 0, red_monro.width - 25, red_monro.height)
+middle_red_monro = red_monro.crop(coordinates_for_middle)
+blend_red_monro = Image.blend(middle_red_monro, left_red_monro, 0.5)
+coordinates = (0, 0, blue_monro.width - 50, blue_monro.height)
+right_blue_monro = blue_monro.crop(coordinates)
+coordinates_for_middle = (25, 0, blue_monro.width - 25, blue_monro.height)
+middle_blue_monro = blue_monro.crop(coordinates_for_middle)
+blend_blue_monro = Image.blend(right_blue_monro, middle_blue_monro, 0.5)
+coordinates_for_middle = (25, 0, green_monro.width - 25, green_monro.height)
+middle_green_monro = green_monro.crop(coordinates_for_middle)
+redesign_monro = Image.merge('RGB', (blend_red_monro, middle_green_monro, blend_blue_monro))
+redesign_monro.save('redesign_monro.jpg')
+avatar_monro = redesign_monro
+avatar_monro.thumbnail((80, 80))
+avatar_monro.save('avatar.monro.jpg')
