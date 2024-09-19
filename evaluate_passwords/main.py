@@ -42,7 +42,7 @@ def rate_password(function_list):
 
 
 def main():
-    password = input('Введите пароль: ')
+    password = input('Введите пароль:')
     function_list=list_of_functions(password)
     score=rate_password(function_list)
     print(f'Рейтинг пароля: {score}')
