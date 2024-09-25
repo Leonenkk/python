@@ -16,8 +16,8 @@ def render_progressbar(total, iteration, prefix='', suffix='', length=30, fill='
 def reply(chat_id, secs_left, bot):
     seconds = parse(secs_left)
     message_id = bot.send_message(chat_id, "Запускаю таймер")
-    bot.create_countdown(seconds, notify_progress, message_id=message_id, chat_id=chat_id, total_time=seconds)
-    bot.create_timer(seconds, choose, author_id=chat_id, text=secs_left)
+    bot.create_countdown(seconds, notify_progress, message_id=message_id, chat_id=chat_id, total_time=seconds,bot=bot)
+    bot.create_timer(seconds, choose, author_id=chat_id, text=secs_left,bot=bot)
 
 
 def notify_progress(secs_left, chat_id, message_id, total_time, bot):
@@ -25,7 +25,7 @@ def notify_progress(secs_left, chat_id, message_id, total_time, bot):
     bot.update_message(chat_id, message_id, update_message)
 
 
-def choose(author_id, text, bot):
+def choose(author_id, text,bot):
     text = "Время вышло!!"
     bot.send_message(author_id, text)
 
@@ -35,7 +35,7 @@ def main():
     tg_token = os.getenv('TG_TOKEN')
     tg_chat_id = os.getenv('TG_CHAT_ID')
     bot = ptbot.Bot(tg_token)
-    bot.reply_on_message(reply)
+    bot.reply_on_message(reply,bot=bot)
     bot.run_bot()
 
 
