@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_6d1916d6f6295e259dab2aba6fe59280 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_6d1916d6f6295e259dab2aba6fe59280" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_6d1916d6f6295e259dab2aba6fe59280 = L.map(
+                "map_6d1916d6f6295e259dab2aba6fe59280",
+                {
+                    center: [53.902284, 27.561831],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 10,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_747bb3c0b75871480d2c685025f662cf = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detectRetina": false, "maxNativeZoom": 19, "maxZoom": 19, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+            tile_layer_747bb3c0b75871480d2c685025f662cf.addTo(map_6d1916d6f6295e259dab2aba6fe59280);
+        
+    
+            var marker_12bf6452a3c02d8cead25e33c99f09f2 = L.marker(
+                [55.24, 37.11],
+                {}
+            ).addTo(map_6d1916d6f6295e259dab2aba6fe59280);
+        
+    
+            var icon_65347e2cd66b6539c1775f16e6cd3cf5 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_12bf6452a3c02d8cead25e33c99f09f2.setIcon(icon_65347e2cd66b6539c1775f16e6cd3cf5);
+        
+    
+        var popup_6c340f99f00ed5c5043cd41bb487cea4 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_af30a24f9c7f02685111dfc2ae4f4666 = $(`<div id="html_af30a24f9c7f02685111dfc2ae4f4666" style="width: 100.0%; height: 100.0%;">Кофейня Шишкин Лес: 634.67км</div>`)[0];
+                popup_6c340f99f00ed5c5043cd41bb487cea4.setContent(html_af30a24f9c7f02685111dfc2ae4f4666);
+            
+        
+
+        marker_12bf6452a3c02d8cead25e33c99f09f2.bindPopup(popup_6c340f99f00ed5c5043cd41bb487cea4)
+        ;
+
+        
+    
+    
+            marker_12bf6452a3c02d8cead25e33c99f09f2.bindTooltip(
+                `<div>
+                     кофейня
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_d7f57411318b7e3b2e811fbcf1143958 = L.marker(
+                [55.55299, 37.134299],
+                {}
+            ).addTo(map_6d1916d6f6295e259dab2aba6fe59280);
+        
+    
+            var icon_5a51f1b715c5faec2ea52c0969bbe79c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_d7f57411318b7e3b2e811fbcf1143958.setIcon(icon_5a51f1b715c5faec2ea52c0969bbe79c);
+        
+    
+        var popup_e7062395bbf0735ec9f435c30d950d69 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_73983c97def71f85ccf8229dc547cc78 = $(`<div id="html_73983c97def71f85ccf8229dc547cc78" style="width: 100.0%; height: 100.0%;">Кофейня Wild Bean Cafe: 642.92км</div>`)[0];
+                popup_e7062395bbf0735ec9f435c30d950d69.setContent(html_73983c97def71f85ccf8229dc547cc78);
+            
+        
+
+        marker_d7f57411318b7e3b2e811fbcf1143958.bindPopup(popup_e7062395bbf0735ec9f435c30d950d69)
+        ;
+
+        
+    
+    
+            marker_d7f57411318b7e3b2e811fbcf1143958.bindTooltip(
+                `<div>
+                     кофейня
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_29afdf2beb0a1d2be00311839f8e1046 = L.marker(
+                [55.55299, 37.134299],
+                {}
+            ).addTo(map_6d1916d6f6295e259dab2aba6fe59280);
+        
+    
+            var icon_95f4f26803081795c9f5a5732692be53 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_29afdf2beb0a1d2be00311839f8e1046.setIcon(icon_95f4f26803081795c9f5a5732692be53);
+        
+    
+        var popup_f1f7c940211699d6b9b5534d17748c1b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_af43c9fda589ad8825b258f76c60921e = $(`<div id="html_af43c9fda589ad8825b258f76c60921e" style="width: 100.0%; height: 100.0%;">Кофейня Wild Bean Cafe: 642.92км</div>`)[0];
+                popup_f1f7c940211699d6b9b5534d17748c1b.setContent(html_af43c9fda589ad8825b258f76c60921e);
+            
+        
+
+        marker_29afdf2beb0a1d2be00311839f8e1046.bindPopup(popup_f1f7c940211699d6b9b5534d17748c1b)
+        ;
+
+        
+    
+    
+            marker_29afdf2beb0a1d2be00311839f8e1046.bindTooltip(
+                `<div>
+                     кофейня
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_b06b0b25712940ea0f87f2a8d995c6f3 = L.marker(
+                [55.60185881758383, 37.17315026421302],
+                {}
+            ).addTo(map_6d1916d6f6295e259dab2aba6fe59280);
+        
+    
+            var icon_cfc69a7f2162f88a298875a381b87c80 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_b06b0b25712940ea0f87f2a8d995c6f3.setIcon(icon_cfc69a7f2162f88a298875a381b87c80);
+        
+    
+        var popup_0722eb9ee8e9388356f8730724968f25 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b28fdd1b95ebaa17b3157100bb965a58 = $(`<div id="html_b28fdd1b95ebaa17b3157100bb965a58" style="width: 100.0%; height: 100.0%;">Кофе с собой: 646.51км</div>`)[0];
+                popup_0722eb9ee8e9388356f8730724968f25.setContent(html_b28fdd1b95ebaa17b3157100bb965a58);
+            
+        
+
+        marker_b06b0b25712940ea0f87f2a8d995c6f3.bindPopup(popup_0722eb9ee8e9388356f8730724968f25)
+        ;
+
+        
+    
+    
+            marker_b06b0b25712940ea0f87f2a8d995c6f3.bindTooltip(
+                `<div>
+                     кофейня
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_8b98b0ef902f993a2d755a7daea8f0a6 = L.marker(
+                [55.4341, 37.2836],
+                {}
+            ).addTo(map_6d1916d6f6295e259dab2aba6fe59280);
+        
+    
+            var icon_32d67a627e6b5ce199ef3e86f5360e98 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_8b98b0ef902f993a2d755a7daea8f0a6.setIcon(icon_32d67a627e6b5ce199ef3e86f5360e98);
+        
+    
+        var popup_53e3d7fdd9cc0366eab43beb5c23aa37 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d1aaf68dad7896334718bec96f3f1bcf = $(`<div id="html_d1aaf68dad7896334718bec96f3f1bcf" style="width: 100.0%; height: 100.0%;">Coffeeshop Company: 649.41км</div>`)[0];
+                popup_53e3d7fdd9cc0366eab43beb5c23aa37.setContent(html_d1aaf68dad7896334718bec96f3f1bcf);
+            
+        
+
+        marker_8b98b0ef902f993a2d755a7daea8f0a6.bindPopup(popup_53e3d7fdd9cc0366eab43beb5c23aa37)
+        ;
+
+        
+    
+    
+            marker_8b98b0ef902f993a2d755a7daea8f0a6.bindTooltip(
+                `<div>
+                     кофейня
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_3a05e5e18e69fce7737e62b36907f840 = L.marker(
+                [55.46438567384305, 37.29060900000001],
+                {}
+            ).addTo(map_6d1916d6f6295e259dab2aba6fe59280);
+        
+    
+            var icon_b9115154a2f7cc4b086ba1fe40752619 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_3a05e5e18e69fce7737e62b36907f840.setIcon(icon_b9115154a2f7cc4b086ba1fe40752619);
+        
+    
+        var popup_3de2b5e310ce87d67ea4a036aebfbed5 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_47189a6442d57a8fddff697997a1119c = $(`<div id="html_47189a6442d57a8fddff697997a1119c" style="width: 100.0%; height: 100.0%;">Кофейня «Лакомка»: 650.51км</div>`)[0];
+                popup_3de2b5e310ce87d67ea4a036aebfbed5.setContent(html_47189a6442d57a8fddff697997a1119c);
+            
+        
+
+        marker_3a05e5e18e69fce7737e62b36907f840.bindPopup(popup_3de2b5e310ce87d67ea4a036aebfbed5)
+        ;
+
+        
+    
+    
+            marker_3a05e5e18e69fce7737e62b36907f840.bindTooltip(
+                `<div>
+                     кофейня
+                 </div>`,
+                {"sticky": true}
+            );
+        
+</script>
+</html>
